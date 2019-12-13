@@ -1,0 +1,46 @@
+{
+  "config": {
+    "title": "Koot Block",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": false,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-",
+    "typescript": false,
+    "theme": "/work/koot-block/node_modules/docz-theme-umi/es/index.js",
+    "plugins": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "props": [],
+  "entries": [
+    {
+      "key": "src/image-clip/index.mdx",
+      "value": {
+        "id": "295f54e675983b8cc2dfcd503df4ffbe",
+        "filepath": "src/image-clip/index.mdx",
+        "link": "",
+        "slug": "src-image-clip-index",
+        "route": "/src-image-clip-index",
+        "name": "Index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "image-clip",
+            "depth": 1,
+            "value": "image-clip"
+          }
+        ]
+      }
+    }
+  ]
+}

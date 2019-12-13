@@ -1,0 +1,12 @@
+{
+  "name": "koot-block",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "father doc dev"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "father": "^2.29.0"
+  }
+}
