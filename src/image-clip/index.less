@@ -1,0 +1,44 @@
+.imageCroperWrap {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  user-select: none;
+}
+.imageCroperImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+}
+.imageCroperCover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  &.moving {
+    cursor: move;
+  }
+  &.resizing {
+    cursor: nwse-resize;
+    .hover {
+      cursor: nwse-resize;
+    }
+  }
+  .hover {
+    position: absolute;
+    cursor: move;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.4);
+  }
+  .resize {
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    height: 6px;
+    width: 6px;
+    background: #ff0000;
+    cursor: nwse-resize;
+  }
+}

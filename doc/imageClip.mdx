@@ -1,0 +1,53 @@
+---
+name: imageClip
+route: /
+---
+
+import { Playground } from "docz";
+
+import ImageClip from "../src/image-clip";
+import ImageLoader from "../utils/imageLoader";
+
+# imageClip
+
+Hello, I'm a mdx file!
+
+## Basic usage
+
+<Playground>
+  {() => {
+    const [rect, setRect] = React.useState({
+      top: 0,
+      left: 0,
+      width: 100,
+      height: 100
+    });
+    const zoom = 2;
+    const [url, setUrl] = React.useState("");
+    const [width, setWidth] = React.useState();
+    const [height, setHeight] = React.useState();
+    const handleFileChange = e => {
+      const file = e.target.files[0];
+      ImageLoader(file, (imgObj, url) => {
+        setUrl(url);
+        setWidth(imgObj.width / zoom);
+        setHeight(imgObj.height / zoom);
+      });
+    };
+    return (
+      <div>
+        <input type="file" onChange={handleFileChange} />
+        <ImageClip
+          image={url}
+          width={width}
+          height={height}
+          onChange={a => {
+            setRect(a);
+            console.log(a);
+          }}
+          rect={rect}
+        />
+      </div>
+    );
+  }}
+</Playground>
