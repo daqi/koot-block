@@ -1,16 +1,15 @@
 ---
-name: imageClip
-route: /
+name: ImageCropper
 ---
 
 import { Playground } from "docz";
 
-import ImageClip from "../src/image-clip";
+import ImageCropper from "../src/image-cropper";
 import ImageLoader from "../utils/imageLoader";
 
-# imageClip
+# ImageCropper
 
-Hello, I'm a mdx file!
+图片截取工具
 
 ## Basic usage
 
@@ -37,14 +36,11 @@ Hello, I'm a mdx file!
     return (
       <div>
         <input type="file" onChange={handleFileChange} />
-        <ImageClip
+        <ImageCropper
           image={url}
           width={width}
           height={height}
-          onChange={a => {
-            setRect(a);
-            console.log(a);
-          }}
+          onChange={setRect}
           rect={rect}
         />
       </div>

@@ -1,0 +1,37 @@
+---
+name: SimpleModal
+---
+
+import { Playground } from "docz";
+
+import SimpleModal from "../src/simple-modal";
+
+# SimpleModal
+
+简单的弹层
+
+## Basic usage
+
+<Playground>
+  {() => {
+    const [visible, setVisible] = React.useState(false);
+    return (
+      <div>
+        <button onClick={()=>setVisible(true)}>打开弹层</button>
+        <SimpleModal
+          visible={visible}
+          onClose={()=>setVisible(false)}
+        >
+          <div style={{
+            width: 400,
+            height: 400,
+            margin: '20px auto',
+            background: '#fff'
+          }}>
+            弹层弹层弹层
+          </div>
+        </SimpleModal>
+      </div>
+    );
+  }}
+</Playground>

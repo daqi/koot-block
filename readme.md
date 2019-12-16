@@ -1,10 +1,10 @@
 # koot-block
 
 ## components
-- [ ] image-crop
-- [ ] simple-modal
+- [x] image-cropper
+- [x] simple-modal
 - [ ] audio-player
-- [ ] group-avatar
+- [x] group-avatar
 - [ ] color-picker
 - [ ] image-viewer
 - [ ] preview-stage
@@ -14,13 +14,13 @@
 - [ ] 
 
 ## utils
-- [ ] loadImage
-- [ ] getImageSize
-- [ ] loadAudio
-- [ ] getAudioDuration
+- [x] loadImage
+- [x] getImageSize
+- [x] loadAudio
+- [x] getAudioDuration
 - [ ] getOffsetParent
 - [ ] getScroll
-- [ ] download
-- [ ] formatByte
-- [ ] hexToRgb
+- [x] download
+- [x] formatBytes
+- [x] hexToRgb
 - [ ] 

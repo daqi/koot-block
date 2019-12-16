@@ -1,0 +1,45 @@
+---
+name: GroupAvatar
+---
+
+import { Playground } from "docz";
+
+import GroupAvatar from "../src/group-avatar";
+
+# GroupAvatar
+
+群组头像
+
+## Basic usage
+
+<Playground>
+  {() => {
+    return (
+      <div>
+        <GroupAvatar
+          users={[
+            { avatar: "", name: "" },
+            { avatar: "", name: "" }
+          ]}
+        />
+        <br />
+        <GroupAvatar
+          users={[
+            { avatar: "", name: "" },
+            { avatar: "", name: "" },
+            { avatar: "", name: "" }
+          ]}
+        />
+        <br />
+        <GroupAvatar
+          users={[
+            { avatar: "", name: "" },
+            { avatar: "", name: "" },
+            { avatar: "", name: "" },
+            { avatar: "", name: "" }
+          ]}
+        />
+      </div>
+    );
+  }}
+</Playground>

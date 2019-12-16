@@ -1,21 +1,17 @@
 import getType from "./getType";
+import fileToUrl from "./fileToUrl";
 
-function fileToUrl(file) {
-  let URL = window.URL || window.webkitURL;
-  return URL.createObjectURL(file);
-}
-
-export default function ImageLoader(img, cb) {
+export default function imageLoader(imageUrl, callback) {
   let url;
-  if (getType(img) === "File") {
-    url = fileToUrl(img);
+  if (getType(imageUrl) === "File") {
+    url = fileToUrl(imageUrl);
   } else {
-    url = img;
+    url = imageUrl;
   }
 
   let imgObj = new Image();
   imgObj.onload = function() {
-    cb && cb(imgObj, url);
+    callback && callback(imgObj, url);
   };
   imgObj.src = url;
 }

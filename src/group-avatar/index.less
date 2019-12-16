@@ -1,0 +1,36 @@
+@avatarw: 72px;
+.group-avatar {
+  width: @avatarw;
+  height: @avatarw;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  background: #e2e2e2;
+  border-radius: @avatarw / 12;
+  padding: @avatarw / 72;
+  .group-avatar-image{
+    width: 50%;
+    height: 50%;
+    padding: @avatarw / 72;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: @avatarw / 36;
+  }
+  &.avatar-1 {
+    .group-avatar-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.avatar-3 {
+    .group-avatar-image:first-child {
+      margin: 0 25%;
+    }
+  }
+}
